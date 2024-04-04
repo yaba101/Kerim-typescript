@@ -12,7 +12,6 @@ let passCount = 0;
 let isBiddingComplete = false;
 app.post('/register', (req, res) => {
     const { name, position } = req.body;
-    console.log(name, position);
     if (!['North', 'South', 'East', 'West'].includes(position)) {
         return res.status(400).send({ error: 'Invalid position specified' });
     }
